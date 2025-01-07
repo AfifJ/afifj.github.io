@@ -8,6 +8,7 @@ import Button from '~/components/ui/Button.astro';
 import { getHomePermalink } from '~/utils/permalinks';
 import { trimSlash, getAsset } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
+// import { INVALID } from 'astro:schema';
 
 interface Link {
   text?: string;
@@ -87,7 +88,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
         class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium md:justify-center"
       >
         {
-          links.map(({ text, href, links }) => (
+          links.map(({ text, href, links, icon }) => (
             <li class={links?.length ? 'dropdown' : ''}>
               {links?.length ? (
                 <>
@@ -104,7 +105,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                         <a
                           class:list={[
                             'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
-                            { 'aw-link-active': href2 === currentPath },
+                            { 'aw-link-active font-bold italic underline': href2 === currentPath },
                           ]}
                           href={href2}
                         >
@@ -118,18 +119,18 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                 <a
                   class:list={[
                     'hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap',
-                    { 'aw-link-active': href === currentPath },
+                    { 'aw-link-active font-bold italic underline': href === currentPath },
                   ]}
                   href={href}
                 >
                   {text}
+                  {icon && <Icon name={icon} class="w-5 h-5" />}
                 </a>
               )}
             </li>
           ))
         }
-          {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
-
+        {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
       </ul>
     </nav>
     <div
