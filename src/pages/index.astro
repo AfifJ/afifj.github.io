@@ -1,0 +1,270 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+// import Note from '~/components/widgets/Note.astro';
+// import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+// import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+// import FAQs from '~/components/widgets/FAQs.astro';
+// import Stats from '~/components/widgets/Stats.astro';
+// import CallToAction from '~/components/widgets/CallToAction.astro';
+// import Header from '~/components/widgets/Header.astro';
+import { Icon } from 'astro-icon/components';
+import Button from '~/components/ui/Button.astro';
+// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+// import Headline from '~/components/blog/Headline.astro';
+// import Testimonials from '~/components/widgets/Testimonials.astro';
+
+const metadata = {
+  title: 'Afif Jamhari — Developer',
+  ignoreTitleTemplate: true,
+};
+
+const socialLinks = [
+  { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
+  { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+  { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+  // { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
+  { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Full Resume',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        //icon: 'tabler:file-cv',
+      },
+      // { text: 'Learn more', href: '#features' },
+    ]}
+  >
+    <!-- image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }} -->
+    <Fragment slot="title">
+      <!-- Free template for <span class="hidden xl:inline">creating websites with</span>
+      <span class="text-accent dark:text-white highlight"> Astro 5.0</span> + Tailwind CSS -->
+      <!-- Empowering <span class="text-accent">Ideas</span> Through Code -->
+      Afif Jamhari
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <!-- <span class="hidden sm:inline">
+        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
+        + Tailwind CSS.</span
+      > -->
+      <!-- <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span> -->
+      <!-- Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
+      Blogs. -->
+
+      I'm Afif, a dedicated Information Systems student ready to <span class="">bring your ideas to life </span>through
+      innovative and impactful technology. Currently exploring the art of <span
+        class="text-black dark:text-white px-1 font-bold">Frontend</span
+      >, <span class="text-black dark:text-white px-1 font-bold">Backend</span>, and <span
+        class="text-black dark:text-white px-1 font-bold">UI/UX</span
+      >.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <!-- <Note /> -->
+
+  <!-- Content Widget **************** -->
+
+  <!-- subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives." -->
+  <header class="mt-8 md:mt-16 text-center max-w-3xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Projects</h1>
+  </header>
+  <Content
+    id="porfolio"
+    isReversed
+    items={[
+      {
+        description:
+          'Developed a comprehensive brand identity for a tech startup, Tech Innovators, specializing in disruptive innovations. The goal was to convey a modern yet approachable image that resonated with both corporate clients and tech enthusiasts.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
+      alt: 'Tech Design Image',
+    }}
+  >
+    <Fragment slot="content">
+      <a href="/project">
+        <h3
+          class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-0 hover:text-accent transition duration-300 ease-in-out relative group"
+        >
+          Spotify Clone
+          <Icon
+            class="inline -top-1 absolute overflow-visible transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300"
+            name="tabler:arrow-up-right"
+          />
+          <span
+            class="absolute inset-x-0 bottom-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+          ></span>
+        </h3>
+      </a>
+      <br />
+      <span class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium"
+        >Javascript</span
+      >
+      <span class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium"
+        >Tailwindcss</span
+      >
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+  <!-- 
+  <Steps
+    id="resume"
+    title="Work experience"
+    items={[
+      {
+        title:
+          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
+        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
+        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+        icon: 'tabler:briefcase',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  /> -->
+
+  <!-- Steps Widget ****************** -->
+  <!-- 
+  <Steps
+    id="resume"
+    title="Education"
+    items={[
+      {
+        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  /> -->
+
+  <!-- Features2 Widget ************** -->
+
+  <!-- tagline="Components" -->
+  <header class="mt-8 md:mt-16 text-center max-w-3xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Skills</h1>
+  </header>
+  <Features2
+    items={[
+      {
+        title: 'Programming Language',
+        description: 'Javascript, PHP, python.',
+        icon: 'tabler:message-language',
+      },
+      {
+        title: 'Libraries & Framworks',
+        description: 'React, Tailwindcss, Bootstrap, Laravel',
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Tools & Platforms',
+        description: 'Git, Github',
+        icon: 'flat-color-icons:approval',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- CallToAction Widget *********** -->
+  <!-- 
+  <CallToAction
+    title="Let's create together"
+    subtitle="Ready to transform your vision into captivating designs?"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Hire me',
+        href: '/',
+      },
+    ]}
+  /> -->
+
+  <!-- HighlightedPosts Widget ******* -->
+  <!-- 
+  <BlogLatestPosts
+  count={3}
+    title="Find out more content in our Blog"
+    information={`The blog is used to display AstroWind documentation.
+                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
+                        Astro is a very interesting technology. Thanks.
+                `}
+  /> -->
+
+  <Fragment slot="footer">
+    <footer class:list={['relative border-t border-gray-200 dark:border-slate-800 not-prose py-8']}>
+      <div
+        class="md:flex px-3 md:px-6 mx-auto w-full max-w-7xl md:items-center md:justify-between py-6 md:py-8 space-y-6"
+      >
+        <div class="h-32 my-5 md:my-0 md:mr-8">
+          <img
+            class="object-cover mx-auto md:mx-0 aspect-square object-center rounded-lg h-full"
+            src="https://i.pinimg.com/564x/2c/15/22/2c15222f332f689b4cf89dd886af7d1d.jpg"
+            alt=""
+          />
+        </div>
+        <div class="space-y-2 md:basis-2/3 text-center md:text-start">
+          <h3 class="text-xl font-semibold">afifjamhari99@gmail.com</h3>
+          <div class="text-sm w-full md:mr-4 mr-auto ml-auto md:ml-0 dark:text-slate-400 max-w-[50%] text-muted">
+            <p>Simplicity is the key to great user experiences. Let me help your company design a simpler</p>
+            <!-- <p>All rights reserved.</p> -->
+            <!-- <Fragment set:html={footNote} /> -->
+          </div>
+        </div>
+        <div class="text-center space-y-5">
+          <Button
+            class="bg-black border-none hover:bg-black hover:shadow-lg transition-shadow duration-300"
+            variant="primary"
+            text="Let's Work Together"
+            />
+            <!-- icon="tabler:click" -->
+            <ul class="flex mb-4 mx-auto md:mb-0 justify-center">
+            {
+              socialLinks.map(({ ariaLabel, href, icon }) => (
+                <li>
+                  <a
+                    class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5 inline-flex items-center"
+                    aria-label={ariaLabel}
+                    href={href}
+                  >
+                    {icon && <Icon name={icon} class="w-5 h-5" />}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </Fragment>
+</Layout>
