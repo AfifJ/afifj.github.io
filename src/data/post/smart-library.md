@@ -1,7 +1,7 @@
 ---
 layout: '~/layouts/MarkdownLayout.astro'
 
-publishDate: 2025-07-15T00:00:00Z
+publishDate: 2025-01-03T00:00:00Z
 title: 'Smart Library'
 excerpt: A smart library application designed to simplify book borrowing, purchasing, and reading through a membership-based system.
 category: Project
