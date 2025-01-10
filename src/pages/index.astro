@@ -3,21 +3,11 @@ import Layout from '~/layouts/PageLayout.astro';
 import Image from '~/components/common/Image.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-// import Note from '~/components/widgets/Note.astro';
-// import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-// import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-// import FAQs from '~/components/widgets/FAQs.astro';
-// import Stats from '~/components/widgets/Stats.astro';
-// import CallToAction from '~/components/widgets/CallToAction.astro';
-// import Header from '~/components/widgets/Header.astro';
+
 import { Icon } from 'astro-icon/components';
 import Button from '~/components/ui/Button.astro';
-// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-// import Headline from '~/components/blog/Headline.astro';
-// import Testimonials from '~/components/widgets/Testimonials.astro';
+import MyContent from '~/components/widgets/MyContent.astro';
 
 const metadata = {
   title: 'Afif Jamhari — Developer',
@@ -45,25 +35,13 @@ const socialLinks = [
         target: '_blank',
         //icon: 'tabler:file-cv',
       },
-      // { text: 'Learn more', href: '#features' },
     ]}
   >
-    <!-- image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }} -->
     <Fragment slot="title">
-      <!-- Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 5.0</span> + Tailwind CSS -->
-      <!-- Empowering <span class="text-accent">Ideas</span> Through Code -->
       Afif Jamhari
     </Fragment>
 
     <Fragment slot="subtitle">
-      <!-- <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
-      > -->
-      <!-- <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span> -->
-      <!-- Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs. -->
 
       I'm Afif, a dedicated Information Systems student ready to <span class="">bring your ideas to life </span>through
       innovative and impactful technology. Currently exploring the art of <span
@@ -91,13 +69,7 @@ const socialLinks = [
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
 
-  <!-- <Note /> -->
-
-  <!-- Content Widget **************** -->
-
-  <!-- subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives." -->
   <header class="mt-8 md:mt-16 text-center max-w-3xl mx-auto">
     <h1
       class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading transition intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
@@ -105,165 +77,30 @@ const socialLinks = [
       Projects
     </h1>
   </header>
-  <Content
-    id="porfolio"
-    isReversed
-    items={[
-      {
-        description:
-          'Aplikasi mobile yang berguna untuk mengakses kelas, membayar ukt, melihat jadwal mata kuliah yang telah terdaftar, menghitung ipk dan perkiraannya, mengumpulkan tugas, presensi, dll.',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/si-pintar/cover.png',
-      alt: 'Si Pintar Mobile App',
-    }}
-  >
-    <Fragment slot="content">
-      <a href="/smart-library">
-        <h3
-          class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-0 hover:text-accent transition duration-300 ease-in-out relative group"
-        >
-          Si Pintar Mobile App
-          <Icon
-            class="inline -top-1 absolute overflow-visible transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300"
-            name="tabler:arrow-up-right"
-          />
-          <span
-            class="absolute inset-x-0 bottom-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
-          ></span>
-        </h3>
-      </a>
-      <br />
-      <span
-        class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium"
-        >dart</span
-      >
-      <span
-        class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium"
-        >flutter</span
-      >
-      <span
-        class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium"
-        >restfull</span
-      >
-    </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-  <Content
-    id="porfolio"
-    isReversed
-    items={[
-      {
-        description:
-          'A smart library application designed to simplify book borrowing, purchasing, and reading through a membership-based system. As the UI/UX Designer, I was responsible for crafting an intuitive user interface and enhancing the overall user experience, ensuring seamless navigation and user satisfaction.',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/smart-library.png',
-      alt: 'Smart Library App Image',
-    }}
-  >
-    <Fragment slot="content">
-      <a href="/smart-library">
-        <h3
-          class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-0 hover:text-accent transition duration-300 ease-in-out relative group"
-        >
-          Smart Library
-          <Icon
-            class="inline -top-1 absolute overflow-visible transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300"
-            name="tabler:arrow-up-right"
-          />
-          <span
-            class="absolute inset-x-0 bottom-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
-          ></span>
-        </h3>
-      </a>
-      <br />
-      <span
-        class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium"
-        >UI/UX</span
-      >
-      <span
-        class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium"
-        >Figma</span
-      >
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- 
-  yout: '~/layouts/MarkdownLayout.astro'
-
-publishDate: 2025-01-08T00:00:00Z
-title: 'Admin Si Pintar'
-excerpt: Web admin untuk aplikasi Si Pintar. Pengguna dapat memanage mahasiswa, materi, dan presensi murid.
-category: Project
-image: ~/assets/images/si-pintar-admin/si-pintar.png
-tags:
-  - Frontend
-  - ReactJs
-  - Tailwind
-  - Mysql
-metadata:
-  canonical: https://astrowind.vercel.app/landing
----
-  -->
-  <Content
-    id="porfolio"
-    isReversed
-    items={[
-      {
-        description:
-          'Web admin untuk aplikasi Si Pintar. Pengguna dapat memanage mahasiswa, materi, dan presensi murid.',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/si-pintar-admin/si-pintar.png',
-      alt: 'Admin Si Pintar',
-    }}
-  >
-    <Fragment slot="content">
-      <a href="/smart-library">
-        <h3
-          class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-0 hover:text-accent transition duration-300 ease-in-out relative group"
-        >
-          Admin Si Pintar
-          <Icon
-            class="inline -top-1 absolute overflow-visible transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300"
-            name="tabler:arrow-up-right"
-          />
-          <span
-            class="absolute inset-x-0 bottom-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
-          ></span>
-        </h3>
-      </a>
-      <br />
-      <span
-        class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium"
-        >ReactJS</span
-      >
-      <span
-        class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium"
-        >Tailwind</span
-      >
-      <span
-        class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium"
-        >MySQL</span
-      >
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
+  <!-- id="porfolio" -->
+  <MyContent
+    description="Aplikasi mobile yang berguna untuk mengakses kelas, membayar ukt, melihat jadwal mata kuliah yang telah terdaftar, menghitung ipk dan perkiraannya, mengumpulkan tugas, presensi, dll."
+    title="Si Pintar Mobile App"
+    img={'~/assets/images/si-pintar/cover.png'}
+    tag={['dart', 'flutter', 'restful']}
+    link="/si-pintar"
+  />
+  <MyContent
+    title="Smart Library"
+    description="A smart library application designed to simplify book borrowing, purchasing, and reading through a membership-based system. As the UI/UX Designer, I was responsible for crafting an intuitive user interface and enhancing the overall user experience, ensuring seamless navigation and user satisfaction."
+    img="~/assets/images/smart-library.png"
+    tag={['ui/ux', 'figma']}
+    link="/smart-library"
+  />
+  <MyContent
+    title="Admin Si Pintar"
+    description="Web admin untuk aplikasi Si Pintar. Pengguna dapat memanage mahasiswa, materi, dan presensi murid."
+    img="~/assets/images/si-pintar-admin/si-pintar.png"
+    tag={['reactjs', 'tailwind', 'mysql']}
+    link="/admin-si-pintar"
+  />
+  
   <!-- Steps Widget ****************** -->
   <!-- 
   <Steps

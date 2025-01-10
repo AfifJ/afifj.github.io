@@ -7,10 +7,10 @@ excerpt: Web admin untuk aplikasi Si Pintar. Pengguna dapat memanage mahasiswa, 
 category: Project
 image: ~/assets/images/si-pintar-admin/si-pintar.png
 tags:
-  - Frontend
-  - ReactJs
-  - Tailwind
-  - Mysql
+  - frontend
+  - reactjs
+  - tailwind
+  - mysql
 # metadata:
   # canonical: ~/assets/images/si-pintar-admin/si-pintar.png
 ---

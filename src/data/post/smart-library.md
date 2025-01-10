@@ -7,8 +7,8 @@ excerpt: A smart library application designed to simplify book borrowing, purcha
 category: Project
 image: ~/assets/images/smart-library.png
 tags:
-  - UI/UX
-  - Figma
+  - ui/ux
+  - figma
 # metadata:
 #   canonical: ~/assets/images/smart-library.png
 ---

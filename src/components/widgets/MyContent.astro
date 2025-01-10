@@ -1,0 +1,66 @@
+---
+import { Icon } from 'astro-icon/components';
+import Content from './Content.astro';
+
+export interface Props {
+  title?: string;
+  //   subtitle?: string;
+  tag?: string[];
+  description?: string;
+  img: string;
+  link: string;
+}
+
+const {
+  title,
+  //   subtitle,
+  tag,
+  description,
+  img,
+  link
+} = Astro.props;
+---
+
+<Content
+  isReversed
+  items={[
+    {
+      description,
+    },
+  ]}
+  image={{
+    src: img,
+    alt: title,
+  }}
+>
+  <Fragment slot="content">
+    <a href={link}>
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-0 hover:text-accent transition duration-300 ease-in-out relative group"
+      >
+        {title}
+        <Icon
+          class="inline -top-1 absolute overflow-visible transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300"
+          name="tabler:arrow-up-right"
+        />
+        <span
+          class="absolute inset-x-0 bottom-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+        ></span>
+      </h3>
+    </a>
+    <br />
+    {
+      tag?.map((item) => (
+        <a href={`/tag/${item}`}>
+          <span class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium">
+            {item}
+          </span>
+        </a>
+      ))
+    }
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
