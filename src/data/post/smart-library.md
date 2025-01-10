@@ -9,8 +9,8 @@ image: ~/assets/images/smart-library.png
 tags:
   - UI/UX
   - Figma
-metadata:
-  canonical: https://astrowind.vercel.app/landing
+# metadata:
+#   canonical: ~/assets/images/smart-library.png
 ---
 
 | Role | UI / UX designer |

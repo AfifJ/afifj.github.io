@@ -11,8 +11,8 @@ tags:
   - ReactJs
   - Tailwind
   - Mysql
-metadata:
-  canonical: https://astrowind.vercel.app/landing
+# metadata:
+  # canonical: ~/assets/images/si-pintar-admin/si-pintar.png
 ---
 
 | Role | Frontend and Backend |

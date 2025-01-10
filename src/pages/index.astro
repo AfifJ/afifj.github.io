@@ -48,7 +48,6 @@ const socialLinks = [
       // { text: 'Learn more', href: '#features' },
     ]}
   >
-  
     <!-- image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }} -->
     <Fragment slot="title">
       <!-- Free template for <span class="hidden xl:inline">creating websites with</span>
@@ -72,7 +71,9 @@ const socialLinks = [
       >, <span class="text-black dark:text-white px-1 font-bold">Backend</span>, and <span
         class="text-black dark:text-white px-1 font-bold">UI/UX</span
       >
-      <ul class="flex my-4 mx-auto md:mb-2 justify-center intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+      <ul
+        class="flex my-4 mx-auto md:mb-2 justify-center intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+      >
         {
           socialLinks.map(({ ariaLabel, href, icon }) => (
             <li>
@@ -98,8 +99,60 @@ const socialLinks = [
 
   <!-- subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives." -->
   <header class="mt-8 md:mt-16 text-center max-w-3xl mx-auto">
-    <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Projects</h1>
+    <h1
+      class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading transition intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+    >
+      Projects
+    </h1>
   </header>
+  <Content
+    id="porfolio"
+    isReversed
+    items={[
+      {
+        description:
+          'Aplikasi mobile yang berguna untuk mengakses kelas, membayar ukt, melihat jadwal mata kuliah yang telah terdaftar, menghitung ipk dan perkiraannya, mengumpulkan tugas, presensi, dll.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/si-pintar/cover.png',
+      alt: 'Si Pintar Mobile App',
+    }}
+  >
+    <Fragment slot="content">
+      <a href="/smart-library">
+        <h3
+          class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-0 hover:text-accent transition duration-300 ease-in-out relative group"
+        >
+          Si Pintar Mobile App
+          <Icon
+            class="inline -top-1 absolute overflow-visible transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300"
+            name="tabler:arrow-up-right"
+          />
+          <span
+            class="absolute inset-x-0 bottom-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+          ></span>
+        </h3>
+      </a>
+      <br />
+      <span
+        class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium"
+        >dart</span
+      >
+      <span
+        class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium"
+        >flutter</span
+      >
+      <span
+        class="bg-blue-50 rounded-full dark:bg-slate-700 inline-block mr-2 rtl:mr-0 rtl:ml-2 mb-2 py-0.5 px-2 font-medium"
+        >restfull</span
+      >
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
   <Content
     id="porfolio"
     isReversed
@@ -181,7 +234,7 @@ metadata:
         <h3
           class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-0 hover:text-accent transition duration-300 ease-in-out relative group"
         >
-        Admin Si Pintar
+          Admin Si Pintar
           <Icon
             class="inline -top-1 absolute overflow-visible transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300"
             name="tabler:arrow-up-right"
@@ -255,7 +308,11 @@ metadata:
 
   <!-- tagline="Components" -->
   <header class="mt-8 md:mt-16 text-center max-w-3xl mx-auto">
-    <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Skills</h1>
+    <h1
+      class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading transition intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+    >
+      Skills
+    </h1>
   </header>
   <Features2
     items={[
@@ -307,7 +364,11 @@ metadata:
   /> -->
 
   <Fragment slot="footer">
-    <footer class:list={['relative border-t border-gray-200 dark:border-slate-800 not-prose py-8']}>
+    <footer
+      class:list={[
+        'relative border-t transition intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade border-gray-200 dark:border-slate-800 not-prose py-8',
+      ]}
+    >
       <div
         class="md:flex px-3 md:px-6 mx-auto w-full max-w-7xl md:items-center md:justify-between py-6 md:py-8 space-y-6"
       >
